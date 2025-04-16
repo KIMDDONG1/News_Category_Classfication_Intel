@@ -16,7 +16,7 @@ options.add_argument('lang=ko_KR')
 service = ChromeService(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 
-url = 'https://news.naver.com/section/100'
+url = 'https://news.naver.com/section/103'
 driver.get(url)
 button_xpath = '//*[@id="newsct"]/div[4]/div/div[2]'
 for i in range(5):
