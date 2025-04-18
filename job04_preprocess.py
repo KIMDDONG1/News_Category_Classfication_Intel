@@ -33,7 +33,7 @@ labeled_y = encoder.fit_transform(Y)
 print(labeled_y[:5])
 label = encoder.classes_
 print(label)
-with open('./models/encoder.pickle','wb')as f:
+with open('encoder.pickle', 'wb')as f:
      pickle.dump(encoder, f)
 
 onehot_y = to_categorical(labeled_y)
@@ -57,7 +57,7 @@ for idx, sentence in enumerate(X):
                words.append(word)
      X[idx] = ' '.join(words)
 
-print(X)
+print(X[:10])
 
 token = Tokenizer()
 token.fit_on_texts(X)
